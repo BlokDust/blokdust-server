@@ -1,0 +1,6 @@
+.aws
+.vscode
+.idea
+AWSConfig.json
+node_modules
+privateConfig.js

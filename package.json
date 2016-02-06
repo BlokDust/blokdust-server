@@ -1,0 +1,27 @@
+{
+  "name": "blokdust-server",
+  "version": "1.0.0",
+  "description": "Port of .Net server (WIP)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlokDust/blokdust-server.git"
+  },
+  "author": "Edward Silverton <e.silverton@gmail.com> (http://edsilv.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BlokDust/blokdust-server/issues"
+  },
+  "homepage": "https://github.com/BlokDust/blokdust-server#readme",
+  "dependencies": {
+    "aws-sdk": "^2.2.33",
+    "body-parser": "^1.14.2",
+    "express": "^4.13.4",
+    "express-json": "^1.0.0",
+    "md5": "^2.0.0",
+    "shortid": "^2.2.4"
+  }
+}
