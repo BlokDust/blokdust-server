@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var config = require('./config');
 var express = require('express');
 var json = require('express-json');
+var sanitiser = require('./sanitiser');
 var sessionUtils = require('./sessionUtils');
 var s3Utils = require('./s3Utils');
 var shortid = require('shortid');
@@ -70,6 +71,8 @@ app.post('/save', function(req, res) {
         // if > 200k, reject
         if (Buffer.byteLength(body.Data, 'utf8') > 200000){
             res.status(413).send('File too large');
+        } else if (!sanitiser.isValidFile(body.Data)) {
+            res.status(400).send('Bad request');
         } else {
             // generate ids
             id = shortid.generate();            
