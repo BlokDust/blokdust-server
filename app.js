@@ -24,11 +24,11 @@ app.use(json());
 
 s3Utils.init();
 
-app.get('/', function (req, res) {
+app.get('/api/', function (req, res) {
     res.send('blokdust api');
 });
 
-app.post('/save', function(req, res) {
+app.post('/api/save', function(req, res) {
     var body = req.body;
     var id = body.Id;
     var sessionId = body.SessionId;
