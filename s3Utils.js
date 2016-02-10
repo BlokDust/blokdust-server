@@ -5,7 +5,7 @@ var s3Utils = {
     s3: null,
     
     init: function() {
-        AWS.config.loadFromPath('./AwsConfig.json');
+        AWS.config.loadFromPath('./AWSConfig.json');
         this.s3 = new AWS.S3();
     },
 
