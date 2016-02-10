@@ -24,6 +24,10 @@ app.use(json());
 
 s3Utils.init();
 
+app.get('/', function (req, res) {
+    res.send('blokdust api');
+});
+
 app.post('/save', function(req, res) {
     var body = req.body;
     var id = body.Id;
