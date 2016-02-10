@@ -18,7 +18,7 @@ var config = {
   production: {
     AWS: AWS,
     server: {
-      port: 8080
+      port: 9000
     }
   }
 };

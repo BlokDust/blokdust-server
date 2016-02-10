@@ -75,7 +75,7 @@ app.post('/save', function(req, res) {
             res.status(400).send('Bad request');
         } else {
             // generate ids
-            id = shortid.generate();            
+            id = shortid.generate();
             sessionId = sessionUtils.getSessionId(id);
             
             params = {Bucket: config.AWS.bucket, Key: 'compositions/' + id, Body: body.Data};
