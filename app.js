@@ -72,8 +72,8 @@ app.post('/api/save', function(req, res) {
     } else {
         // saving new file
 
-        // if > 200k, reject
-        if (Buffer.byteLength(body.Data, 'utf8') > 200000){
+        // if > 256k, reject
+        if (Buffer.byteLength(body.Data, 'utf8') > 262144){
             res.status(413).send('File too large');
         } else if (!sanitiser.isValidFile(body.Data)) {
             res.status(400).send('Bad request');
