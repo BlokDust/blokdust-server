@@ -1,5 +1,5 @@
 var AWS = {
-        bucket: 'files.blokdust.com'
+        bucket: 'files.blokdust.io'
     };
 
 var config = {
